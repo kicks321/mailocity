@@ -19,12 +19,13 @@ export default {
   /**
    * That long string from mlab
    */
-  databaseURL: process.env.MYSQL_URI,
   database: {
+    type: process.env.DB_TYPE,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PWD,
-    name: process.env.DB_NAME
+    name: process.env.DB_NAME,
+    port: Number.parseInt(process.env.DB_PORT)
   },
 
 

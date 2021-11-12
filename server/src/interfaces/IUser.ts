@@ -6,4 +6,7 @@ export interface IUser {
     lastName: string;
     email: string;
 }
-
+export interface IUserSignUp {
+    username: string;
+    password: string;
+  }

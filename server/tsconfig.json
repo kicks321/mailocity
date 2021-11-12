@@ -23,12 +23,13 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
     }
   },
   "include": [
+    "./",
     "./src/**/*"
-  ],
+, "ormconfig.ts"  ],
   "exclude": [
     "node_modules",
     "tests"
