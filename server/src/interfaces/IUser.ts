@@ -5,6 +5,8 @@ export interface IUser {
   firstName: string;
   lastName: string;
   email: string;
+  createdDate: Date;
+  modifiedDate: Date;
 }
 export interface IUserSignUp {
   firstName: string;
