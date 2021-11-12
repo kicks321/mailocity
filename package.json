@@ -1,0 +1,29 @@
+{
+  "name": "mailocity",
+  "version": "1.0.0",
+  "description": "Email client available on mobile and web",
+  "main": "index.js",
+  "scripts": {
+    "web": "cd web && npm run start",
+    "ios": "cd mobile && npm run ios",
+    "android": "cd mobile && npm run android",
+    "server": "cd server && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Rangyia/mailocity.git"
+  },
+  "keywords": [
+    "Email",
+    "Mail",
+    "Client",
+    "Mobile"
+  ],
+  "author": "Jess Graham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Rangyia/mailocity/issues"
+  },
+  "homepage": "https://gitlab.com/Rangyia/mailocity#readme"
+}
