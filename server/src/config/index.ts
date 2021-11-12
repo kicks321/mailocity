@@ -17,6 +17,12 @@ export default {
   port: parseInt(process.env.PORT, 10),
 
   /**
+   * JWT Verifiers
+   */
+  jwtSecret: process.env.JWT_SECRET,
+  jwtAlgorithm: process.env.JWT_ALGO,
+
+  /**
    * That long string from mlab
    */
   database: {
