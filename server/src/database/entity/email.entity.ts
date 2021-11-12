@@ -18,9 +18,6 @@ export class Email {
     body: string;
 
     @Column()
-    firstName: string;
-
-    @Column()
     @IsDate()
     sentDate: Date;
 
