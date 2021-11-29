@@ -3,10 +3,10 @@ import cors from 'cors';
 import config from '@/config';
 import routes from '@/api';
 import MiddleWare from '@/api/middleware';
-  // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
+import { APIError, ErrorCodes, ErrorStatus } from '@/types';
+// Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 
 export default ({ app }: { app: express.Application }) => {
-
   /**
    * Health Check endpoints
    */
@@ -30,33 +30,30 @@ export default ({ app }: { app: express.Application }) => {
 
   // Load API routes
   app.use(config.api.prefix, routes());
-  
+
   /* LOAD ERROR HANDLERS */
-  app.use(MiddleWare.ErrorHandler)
+  app.use(MiddleWare.ErrorHandler);
 
   /// catch 404 and forward to error handler
   app.use((req, res, next) => {
-    const err = new Error('Not Found');
-    err['status'] = 404;
-    next(err);
+    const error: APIError = {
+      status: ErrorStatus.METHOD_NOT_ALLOWED,
+      message: `'${req.method}' method not allowed`,
+      source: req.originalUrl,
+      errors: [],
+    };
+    next(error);
   });
 
   /// error handlers
   app.use((err, req, res, next) => {
     if (err.name === 'UnauthorizedError') {
-      return res
-        .status(err.status)
-        .send({ message: err.message })
-        .end();
+      return res.status(err.status).send({ message: err.message }).end();
     }
     return next(err);
   });
   app.use((err, req, res, next) => {
     res.status(err.status || 500);
-    res.json({
-      errors: {
-        message: err.message,
-      },
-    });
+    res.json(err);
   });
 };

@@ -1,12 +1,11 @@
 export type Error = {
-  code: ErrorCodes;
-  message: string;
-  source: string;
-  detail?: string;
+  code?: ErrorCodes;
+  details?: string;
 };
 
 export enum ErrorCodes {
   MISSING_FIELD = '100',
+  METHOD_NOT_ALLOWED = '101',
 }
 
 export enum ErrorStatus {
@@ -24,5 +23,7 @@ export enum ErrorStatus {
 
 export type APIError = {
   status: ErrorStatus;
-  errors?: Error[];
+  message: string;
+  source: string;
+  errors: Error[];
 };
