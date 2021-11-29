@@ -1,11 +1,11 @@
 import 'reflect-metadata';
 import config from './config';
 import express from 'express';
-import Logger from './loaders/logger';
+import Logger from './modules/logger';
 
 async function startServer() {
   const app = express();
-  await require('./loaders').default({ expressApp: app });
+  await require('./modules').default({ expressApp: app });
 
   app
     .listen(config.port, () => {

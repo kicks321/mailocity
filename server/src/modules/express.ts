@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import config from '@/config';
 import routes from '@/api';
+import MiddleWare from '@/api/middleware';
   // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 
 export default ({ app }: { app: express.Application }) => {
@@ -29,6 +30,9 @@ export default ({ app }: { app: express.Application }) => {
 
   // Load API routes
   app.use(config.api.prefix, routes());
+  
+  /* LOAD ERROR HANDLERS */
+  app.use(MiddleWare.ErrorHandler)
 
   /// catch 404 and forward to error handler
   app.use((req, res, next) => {

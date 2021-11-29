@@ -14,10 +14,9 @@ export default (app: Router) => {
       body: Joi.object({
         username: Joi.string().required(),
         password: Joi.string().required(),
-      }),
+      }).unknown(),
     }),
     async (req: Request, res: Response, next: NextFunction) => {
-      console.log('We made it here!!!');
       const logger: Logger = Container.get('logger');
       logger.debug('Calling Sign-Up endpoint with body: %o', req.body);
       try {
