@@ -1,7 +1,9 @@
-import { ErrorHandler } from "./ErrorHandler";
+import { ErrorHandler } from './ErrorHandler';
+import TokenHandler from './TokenHandler';
 
 const MiddleWare = {
-    ErrorHandler: ErrorHandler
-}
+  ErrorHandler: ErrorHandler,
+  TokenHandler: TokenHandler,
+};
 
 export default MiddleWare;

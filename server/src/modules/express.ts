@@ -6,7 +6,7 @@ import MiddleWare from '@/api/middleware';
 import { APIError, ErrorCodes, ErrorStatus } from '@/types';
 // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 
-export default ({ app }: { app: express.Application }) => {
+export default async ({ app }: { app: express.Application }) => {
   /**
    * Health Check endpoints
    */
@@ -28,11 +28,12 @@ export default ({ app }: { app: express.Application }) => {
   // Transforms the raw string of req.body into json
   app.use(express.json());
 
+  /* LOAD ERROR HANDLERS */
+  app.use(MiddleWare.TokenHandler);
+  app.use(MiddleWare.ErrorHandler);
+
   // Load API routes
   app.use(config.api.prefix, routes());
-
-  /* LOAD ERROR HANDLERS */
-  app.use(MiddleWare.ErrorHandler);
 
   /// catch 404 and forward to error handler
   app.use((req, res, next) => {
