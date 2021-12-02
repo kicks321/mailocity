@@ -24,5 +24,5 @@ export const ErrorHandler = (err: any, req: any, res: any, next: any) => {
     console.log(err);
   }
 
-  return res.status(ErrorStatus.BAD_REQUEST).json(err.message);
+  return res.status(ErrorStatus.BAD_REQUEST).json(err);
 };

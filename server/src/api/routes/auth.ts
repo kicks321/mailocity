@@ -21,7 +21,7 @@ export default (app: Router) => {
       logger.debug('Calling Sign-Up endpoint with body: %o', req.body);
       try {
         const authServiceInstance = Container.get(AuthService);
-        const user = await authServiceInstance.SignUp(req.body);
+        const user = await authServiceInstance.signUp(req.body);
         return res.status(201).json({ ...user });
       } catch (e) {
         logger.error('🔥 error: %o', e);
@@ -44,7 +44,7 @@ export default (app: Router) => {
       try {
         const { username, password } = req.body;
         const authServiceInstance = Container.get(AuthService);
-        const { user, token } = await authServiceInstance.SignIn(username, password);
+        const { user, token } = await authServiceInstance.signIn(username, password);
         return res.status(201).json({ user, token });
       } catch (e) {
         logger.error('🔥 error: %o', e);
@@ -52,4 +52,19 @@ export default (app: Router) => {
       }
     },
   );
+
+  route.get('/signout', async (req: Request, res: Response, next: NextFunction) => {
+    const logger: Logger = Container.get('logger');
+    logger.debug('Calling Sign-In endpoint with body: %o', req.body);
+    try {
+      const { authorization } = req.headers;
+      const token = authorization.split(' ')[1];
+      const authServiceInstance = Container.get(AuthService);
+      await authServiceInstance.signOut(token);
+      return res.status(201).json({ status: 200, message: 'User logged out successfully' });
+    } catch (e) {
+      logger.error('🔥 error: %o', e);
+      return next(e);
+    }
+  });
 };

@@ -27,9 +27,9 @@
     }
   },
   "include": [
-    "./",
-    "./src/**/*"
-, "ormconfig.ts"  ],
+    "./src/**/*", 
+    "ormconfig.ts" 
+  ],
   "exclude": [
     "node_modules",
     "tests"
