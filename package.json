@@ -14,7 +14,7 @@
     "android": "cd mobile && npm run android",
     "server": "cd server && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "cd .. && husky install web/.husky && husky install mobile/.husky && husky install server/.husky"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
