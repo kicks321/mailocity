@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "description": "Node.js Restful CRUD API with Node.js, Express.js, and MySQL",
     "main": "index.js",
+    "eslintConfig": {
+        "env": {
+            "node": true
+        }
+    },
     "scripts": {
         "build": "tsc",
         "start": "nodemon",

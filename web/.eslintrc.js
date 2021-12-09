@@ -1,16 +1,22 @@
-module.exports = {
+module.exports =  {
     env: {
         browser: true,
         es6: true,
     },
     extends: [
         'eslint:recommended',
+        'prettier/@typescript-eslint',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
         'plugin:jsx-a11y/strict',
     ],
     parser: '@typescript-eslint/parser',
+    extends:  [
+      'plugin:@typescript-eslint/recommended',
+      'prettier/@typescript-eslint',
+      'plugin:prettier/recommended',
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -18,7 +24,6 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
     rules: {
         'react-hooks/exhaustive-deps': 'error',
         'no-var': 'error',
@@ -28,6 +33,7 @@ module.exports = {
         'space-before-blocks': 'error',
         'import/prefer-default-export': 'off',
     },
+    plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
     overrides: [
         {
             files: [
@@ -42,5 +48,5 @@ module.exports = {
                 jest: true,
             },
         },
-    ],
+    ],  
 };
