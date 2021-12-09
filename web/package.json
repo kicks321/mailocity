@@ -27,6 +27,7 @@
         "lint-web": "lint-staged"
     },
     "lint-staged": {
+        "**/*.ts": "tsc-files --noEmit",
         "*.{js,ts,tsx, jsx}": [
             "eslint --quiet --fix"
         ],
