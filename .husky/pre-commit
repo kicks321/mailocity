@@ -3,6 +3,3 @@
 
 cd web
 npm run lint-web
-
-cd mobile
-npm run lint-mobile
