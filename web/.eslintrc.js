@@ -53,8 +53,6 @@ module.exports = {
                 'testing-library/no-await-sync-query': 'error',
                 'testing-library/no-debug': 'warn',
                 'testing-library/no-dom-import': 'off',
-                // We don't have access to the DOM in RN
-                'testing-library/prefer-screen-queries': 'off',
             },
         },
     ],

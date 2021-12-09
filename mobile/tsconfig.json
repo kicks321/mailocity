@@ -1,43 +1,35 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "target": "es6",
-    "lib": [
-      "es6",
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ],
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "pretty": true,
-    "sourceMap": true,
-    "outDir": "./build",
-    "allowJs": true,
-    "noEmit": false,
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "jsx": "react-native",
-    "paths": {
-      "@/*": ["./src/*"],
-    }
-  },
-  "include": [
-    "./",
-    "./src/**/*", 
-  ],
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js",
-    "jestSetup.js",
-    ".eslintrc.js"
-  ],
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["es6"],
+        "typeRoots": ["./node_modules/@types", "./src/types"],
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "pretty": true,
+        "sourceMap": true,
+        "outDir": "./build",
+        "allowJs": true,
+        "noEmit": false,
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "jsx": "react-native",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["./", "./src/**/*"],
+    "exclude": [
+        "node_modules",
+        "babel.config.js",
+        "metro.config.js",
+        "jest.config.js",
+        "jestSetup.js",
+        ".eslintrc.js"
+    ]
 }
