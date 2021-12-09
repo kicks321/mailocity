@@ -7,3 +7,5 @@ cd ..
 
 cd web
 npm run lint-web
+cd ..
+

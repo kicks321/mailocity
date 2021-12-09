@@ -1,4 +1,4 @@
 build
 node_modules
 .github
-.eslintrs.js
+.eslintrc.js

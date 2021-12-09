@@ -19,7 +19,7 @@
         "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
         "db:migrate": "npm run typeorm migration:run",
         "db:create-migration": "npm run typeorm migration:create -- -n",
-        "prepare": "cd .. && husky install server/.husky"
+        "lint-server": "lint-staged"
     },
     "lint-staged": {
         "*.{js,ts,tsx, jsx}": [
@@ -76,7 +76,9 @@
         "@typescript-eslint/parser": "^5.0.0",
         "eslint": "^8.0.1",
         "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^25.3.0",
         "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-testing-library": "^5.0.1",
         "husky": "^7.0.4",
         "jest": "^27.2.5",
         "lint-staged": "^12.1.2",
