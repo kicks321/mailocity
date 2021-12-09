@@ -7,7 +7,18 @@
         "web": "expo start --web",
         "eject": "expo eject",
         "prepare": "cd .. && husky install server/.husky",
-        "lint-mobile": "eslint --fix --ext .js,jsx,.ts,.tsx ./"
+        "lint-mobile": "lint-staged"
+    },
+    "lint-staged": {
+        "./src/**/*.{ts,tsx,js,jsx}": [
+            "eslint --ext .tsx --ext .ts src/ --fix"
+        ],
+        "./src/**": [
+            "prettier --write ."
+        ],
+        "./src/**/*.{json,md,html,js,jsx,ts,tsx}": [
+            "prettier --write"
+        ]
     },
     "eslintConfig": {
         "env": {
