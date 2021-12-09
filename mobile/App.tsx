@@ -7,6 +7,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Text>Hello</Text>
       <Button title="Increment" onPress={() => setCounter(counter + 1)}/>
       <Text>{counter}</Text>
       <Button title="Decrement" onPress={() => setCounter(counter - 1)}/>
