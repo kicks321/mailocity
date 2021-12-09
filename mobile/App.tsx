@@ -1,11 +1,15 @@
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Button, Text} from 'react-native';
 
 export default function App() {
+  const [counter, setCounter] = React.useState<number>(0);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Button title="Increment" onPress={() => setCounter(counter + 1)}/>
+      <Text>{counter}</Text>
+      <Button title="Decrement" onPress={() => setCounter(counter - 1)}/>
       <StatusBar style="auto" />
     </View>
   );
