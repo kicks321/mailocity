@@ -22,7 +22,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  plugins: ['react', 'prettier', 'react-hooks', '@typescript-eslint'],
   rules: {
     quotes: ['error', 'single', { avoidEscape: true }],
     'no-empty-function': 'off',

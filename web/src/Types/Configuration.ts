@@ -1,6 +1,6 @@
 export type Configuration = {
-  env: string;
-  api: {
-    url: string;
-  };
+    env: string;
+    api: {
+        url: string;
+    };
 };
