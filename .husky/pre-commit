@@ -9,3 +9,6 @@ cd web
 npm run lint-web
 cd ..
 
+cd server
+npm run lint-server
+cd ..
