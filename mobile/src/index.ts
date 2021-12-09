@@ -5,3 +5,9 @@ const greet = (): any => {
 const hello = (dog) => {
     return '5';
 };
+
+const test = (hello) => {
+    return hello;
+};
+
+test('test');
