@@ -34,5 +34,10 @@
   "homepage": "https://gitlab.com/Rangyia/mailocity#readme",
   "devDependencies": {
     "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "cd mobile && npm run lint-mobile"
+    }
   }
 }
