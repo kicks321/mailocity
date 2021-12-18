@@ -23,7 +23,7 @@
             "@/*": ["./src/*"]
         }
     },
-    "include": ["./", "./src/**/*"],
+    "include": ["./", "./src/*", "./src/**/*"],
     "exclude": [
         "node_modules",
         "babel.config.js",

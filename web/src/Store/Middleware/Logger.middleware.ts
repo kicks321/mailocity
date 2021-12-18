@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 import { Middleware } from 'redux';
-import ACTION_TYPES from './ActionTypes';
+import ACTION_TYPES from '../ActionTypes';
 
 const blockedList = [ACTION_TYPES.BLOCKED_ACTION];
 

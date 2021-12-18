@@ -6,7 +6,10 @@ const DEFAULT_STATE: AppState = {
     _persist: undefined,
 
     // Authentication state
-    authenticationState: ACTION_TYPES.UNAUTHENTICATED,
+    userState: {
+        state: ACTION_TYPES.UNAUTHENTICATED,
+        profile: undefined,
+    },
 };
 
 export default DEFAULT_STATE;

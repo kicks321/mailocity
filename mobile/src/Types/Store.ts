@@ -1,19 +1,20 @@
-import ACTION_TYPES from '@/Redux/ActionTypes';
+import ACTION_TYPES from '@/Store/ActionTypes';
 
 export type AppState = {
     readonly _persist: unknown;
-    readonly authenticationState: ACTION_TYPES;
+    readonly userState: UserState;
 };
 
-export type StateData = {
-    profile: {
-        firstName: string;
-        lastName: string;
-        email: string;
+export type UserState = {
+    state: ACTION_TYPES;
+    profile?: {
+        firstName?: string;
+        lastName?: string;
+        email?: string;
     };
 };
 
-export type SetAppState = {
+export type SetUserState = {
     type: ACTION_TYPES;
-    payload?: StateData;
+    payload?: UserState;
 };
