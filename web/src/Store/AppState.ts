@@ -1,4 +1,4 @@
-import { AppState } from 'src/Types';
+import { AppState } from '@/Types';
 import ACTION_TYPES from './ActionTypes';
 
 const DEFAULT_STATE: AppState = {
@@ -6,7 +6,10 @@ const DEFAULT_STATE: AppState = {
     _persist: undefined,
 
     // Authentication state
-    authenticationState: ACTION_TYPES.UNAUTHENTICATED,
+    userState: {
+        state: ACTION_TYPES.UNAUTHENTICATED,
+        profile: undefined,
+    },
 };
 
 export default DEFAULT_STATE;

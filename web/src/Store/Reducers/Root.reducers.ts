@@ -1,5 +1,5 @@
 import { Action, Reducer } from 'redux';
-import { appStateReducer } from './State.reducers';
+import { userStateReducer } from './State.reducers';
 import { AppState } from '@/Types';
 
 /**
@@ -9,7 +9,7 @@ import { AppState } from '@/Types';
 // eslint-disable-next-line no-unused-vars
 const reducers: Array<(state: AppState, action: Action) => AppState> = [
     // Global Actions
-    appStateReducer,
+    userStateReducer,
 ];
 
 const RootReducer: Reducer<AppState> = (state, action) =>

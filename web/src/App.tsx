@@ -1,20 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import './App.css';
+import Button from './Components/Button/Button.component';
+import { Store } from './Store/Store';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <Provider store={Store}>
+            <Button />
+        </Provider>
     );
 }
 

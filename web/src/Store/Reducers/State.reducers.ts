@@ -1,14 +1,19 @@
-import { AppState, SetAppState } from '@/Types';
+import { AppState, SetUserState } from '@/Types';
 import * as R from 'ramda';
 import { Action } from 'redux';
 import ACTION_TYPES from '../ActionTypes';
 
-export const appStateReducer = (state: AppState, action: Action): AppState => {
-    if (!Object.values(ACTION_TYPES).includes((action as SetAppState).type)) {
+export const userStateReducer = (state: AppState, action: Action): AppState => {
+    if (!Object.values(ACTION_TYPES).includes((action as SetUserState).type)) {
         return state;
     }
 
+    console.log('We are reducing now', state);
+
     return R.mergeDeepRight(state, {
-        profile: (action as SetAppState).payload,
+        userState: {
+            state: (action as SetUserState).type,
+            ...(action as SetUserState).payload,
+        },
     });
 };

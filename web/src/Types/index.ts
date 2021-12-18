@@ -1,2 +1,2 @@
 export * from './Configuration';
-export * from './Store';
+export * from './Store.type';
