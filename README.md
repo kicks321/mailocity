@@ -2,7 +2,7 @@ Mail client built for mobile and web on MERN stack.
 
 # :zap: Mailocity
 
-* React/React-Native Express Node MySQL Redis (MERN) full-stack app, integrates React/React-Native frontend with Node.js backend that is deployed to Heroku.
+* React/React-Native Express Node MySQL Redis (MERN) full-stack app, integrates React/React-Native frontend with Node.js backend that is deployed to Heroku. Mail client built for mobile and web on MERN stack.
 *** Note: to open web links in a new window use: _ctrl+click on link_ /  _cmd+click on link_**
 
 ## :books: General info
