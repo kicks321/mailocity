@@ -8,6 +8,7 @@ const DEFAULT_STATE: AppState = {
     // Authentication state
     userState: {
         state: ACTION_TYPES.UNAUTHENTICATED,
+        mode: 'light',
         profile: undefined,
     },
 };

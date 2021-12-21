@@ -1,4 +1,5 @@
 import ACTION_TYPES from '@/Store/ActionTypes';
+import { PaletteMode } from '@mui/material';
 
 export type AppState = {
     readonly _persist: unknown;
@@ -6,7 +7,8 @@ export type AppState = {
 };
 
 export type UserState = {
-    state: ACTION_TYPES;
+    state?: ACTION_TYPES;
+    mode?: PaletteMode;
     profile?: {
         firstName?: string;
         lastName?: string;
