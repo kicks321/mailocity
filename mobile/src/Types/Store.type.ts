@@ -1,4 +1,4 @@
-import ACTION_TYPES from '@/Store/ActionTypes';
+import ACTION_TYPES from '@Store/ActionTypes';
 
 export type AppState = {
     readonly _persist: unknown;

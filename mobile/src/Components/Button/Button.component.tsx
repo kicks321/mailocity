@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Text, TouchableOpacity } from 'react-native';
-import { AppState } from '@/Types';
-import { setUserState } from '../../Store/Actions/State.actions';
-import ACTION_TYPES from '../../Store/ActionTypes';
+import { AppState } from '@Types';
+import ACTION_TYPES from '@Store/ActionTypes';
+import { setUserState } from '@Store/Actions';
 
 const Button = (): JSX.Element => {
     const { userState } = useSelector((state: AppState) => state);

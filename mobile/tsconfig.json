@@ -17,10 +17,17 @@
         "allowJs": true,
         "noEmit": false,
         "esModuleInterop": true,
-        "baseUrl": ".",
         "jsx": "react-native",
+        "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            // Components
+            "@Core": ["./src/Core"],
+            "@Views": ["./src/Views"],
+            "@Navigation/*": ["./src/Navigation/*"],
+            // Types
+            "@Types": ["./src/Types"],
+            // Redux
+            "@Store/*": ["./src/Store/*"]
         }
     },
     "include": ["./", "./src/*", "./src/**/*"],

@@ -1,3 +1,3 @@
-import { setAppState } from './State.actions';
+import { setUserState } from './State.actions';
 
-export { setAppState };
+export { setUserState };
