@@ -7,6 +7,7 @@ Mail client built for mobile and web on MERN stack.
 
 ## :books: General info
 
+
 ### Backend
 
 * Husky, ESLint, and Prettier are configured to handle safe commits
@@ -16,10 +17,10 @@ Mail client built for mobile and web on MERN stack.
 
 ### Frontend
 
-* React frontend includes a fully usable mail client for recieving and sending emails
-* [JavaScript XML (JSX)](https://reactjs.org/docs/introducing-jsx.html) used to write HTML elements in Javascript
-* [React Native](https://reactnative.dev/docs/accessibilityinfo) cross-platform mobile platform used to transpile TypeScript -> JavaScript -> Native Mobile Code
-
+* Frontend structure follows a loose structure of MVVM (View, View Model, Model) structure
+* Separation of business logic on the views allow for isolated testing
+* Views contain the UI (the screen)
+* Models contain the business logic of similar to hooks, but are strictly coupled with specific screens
 ## :signal_strength: Technologies - Backend
 
 * [TypeScript](https://nodejs.dev/learn/nodejs-with-typescript) Open-source language maintained by Microsoft for type-safe JavaScript

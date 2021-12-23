@@ -1,6 +1,6 @@
+import { AppState } from '@Types';
 import { Action, Reducer } from 'redux';
 import { userStateReducer } from './State.reducers';
-import { AppState } from '@/Types';
 
 /**
  * A list of all app state reducers. These are functions that take actions and your previous app state, and calculate out
@@ -12,7 +12,6 @@ const reducers: Array<(state: AppState, action: Action) => AppState> = [
 ];
 
 const rootReducer: Reducer<AppState> = (state, action) =>
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    reducers.reduce((running, next) => next(running, action), state!);
+    reducers.reduce((running, next) => next(running, action), state);
 
 export default rootReducer;

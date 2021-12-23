@@ -23,6 +23,7 @@
             // Components
             "@Core": ["./src/Core"],
             "@Views": ["./src/Views"],
+            "@ViewModels": ["./src/ViewModels"],
             "@Navigation/*": ["./src/Navigation/*"],
             // Types
             "@Types": ["./src/Types"],

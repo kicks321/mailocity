@@ -1,4 +1,4 @@
-import { AppState, SetUserState } from '@/Types';
+import { AppState, SetUserState } from '@Types';
 import * as R from 'ramda';
 import { Action } from 'redux';
 import ACTION_TYPES from '../ActionTypes';
