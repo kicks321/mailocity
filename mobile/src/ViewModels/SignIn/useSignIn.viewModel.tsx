@@ -1,6 +1,6 @@
+import { useDispatch } from 'react-redux';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { BaseNavigatorScreenParams } from '@Types';
-import { useDispatch } from 'react-redux';
 import { BaseScreenViewModelParams } from '../Base/BaseScreen.viewModel';
 
 interface SignInViewModelParams extends BaseScreenViewModelParams {
@@ -15,7 +15,7 @@ const useSignInViewModel = (params: SignInViewModelParams): SignInViewModel => {
     const dispatch = useDispatch();
 
     const handleOnNavigate = (): void => {
-        console.log('Hitting against the hook');
+        console.log('Hitting the Sign In hook');
         params.navigation.navigate('SignUp');
         return;
     };

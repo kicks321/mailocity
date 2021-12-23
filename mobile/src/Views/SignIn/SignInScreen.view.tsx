@@ -2,19 +2,21 @@ import React from 'react';
 import { BaseNavigatorScreenParams } from '@Types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScreenView } from '../Base/BaseScreen.view';
-import { Button, TextInput, Title } from 'react-native-paper';
+import { Button, Title } from 'react-native-paper';
 import { useSignInViewModel } from '@ViewModels';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
+import { Block } from '@Components';
 
 type SignInScreenProps = NativeStackScreenProps<BaseNavigatorScreenParams>;
 
 const SignInScreen: React.FunctionComponent<SignInScreenProps> = (props) => {
-    const { handleOnNavigate } = useSignInViewModel({ navigation: props.navigation });
+    const ViewModel = useSignInViewModel({ navigation: props.navigation });
 
     return (
         <ScreenView>
-            <Title>Sign In Screen</Title>
-            <Button onPress={() => handleOnNavigate()}>Sign Up</Button>
+            <Block style={{ borderRadius: 1, borderWidth: 1, borderColor: 'red' }}>
+                <Title>Sign In Screen</Title>
+                <Button onPress={() => ViewModel.handleOnNavigate()}>Sign Up</Button>
+            </Block>
         </ScreenView>
     );
 };

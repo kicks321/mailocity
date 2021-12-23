@@ -7,7 +7,8 @@
         "web": "expo start --web",
         "eject": "expo eject",
         "prepare": "cd .. && husky install server/.husky",
-        "lint-mobile": "lint-staged"
+        "lint-mobile": "lint-staged",
+        "lint": "eslint --ext .tsx --ext .ts src/ --fix"
     },
     "lint-staged": {
         "./src/**/*.{ts,tsx,js,jsx}": [
@@ -43,6 +44,7 @@
         "react-native-responsive-screen": "^1.4.2",
         "react-native-safe-area-context": "3.2.0",
         "react-native-screens": "~3.4.0",
+        "react-native-video": "^5.2.0",
         "react-native-web": "~0.13.12",
         "react-redux": "^7.2.6",
         "redux": "^4.1.2",

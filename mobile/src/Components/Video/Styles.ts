@@ -6,14 +6,11 @@ import {
 
 const Styles = StyleSheet.create({
     /** ------------------ Screen styles ------------------ */
-    screenLayoutStyle: {
-        flex: 1,
+    videoLayoutStyle: {
         maxWidth: wp(100),
-        maxHeight: hp(100),
+        justifyContent: 'center',
+        alignContent: 'center',
         alignItems: 'center',
-    },
-    screenColorStyle: {
-        backgroundColor: '#fff',
     },
 });
 

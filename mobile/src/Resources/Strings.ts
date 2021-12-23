@@ -1,1 +1,3 @@
-export enum Strings {}
+export enum Strings {
+    TITLE = 'Title',
+}

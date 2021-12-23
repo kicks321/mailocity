@@ -23,6 +23,7 @@
             // Components
             "@Core": ["./src/Core"],
             "@Views": ["./src/Views"],
+            "@Components": ["./src/Components"],
             "@ViewModels": ["./src/ViewModels"],
             "@Navigation/*": ["./src/Navigation/*"],
             // Types
@@ -31,7 +32,7 @@
             "@Store/*": ["./src/Store/*"]
         }
     },
-    "include": ["./", "./src/*", "./src/**/*"],
+    "include": ["./", "./src/*", "./src/**/*", "./global.d.ts"],
     "exclude": [
         "node_modules",
         "babel.config.js",
