@@ -16,7 +16,7 @@ export const ScreenView: React.FunctionComponent<ScreenViewProps> = (props) => {
             duration={props.duration || 500}
             style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
         >
-            <StatusBar style="auto" />
+            <StatusBar style="light" />
             {props.children}
         </Animatable.View>
     );

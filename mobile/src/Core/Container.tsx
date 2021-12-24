@@ -1,17 +1,18 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
+import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 interface Props {
     children?: React.ReactNode;
 }
 
 const ContainerProvider: React.FC<Props> = (props: Props): JSX.Element => {
-    return <SafeAreaView style={styles.container}>{props.children}</SafeAreaView>;
+    return <SafeAreaView>{props.children}</SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width: widthPercentageToDP(100),
     },
 });
 

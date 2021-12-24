@@ -1,1 +1,1 @@
-declare module 'react-native-video';
+declare module 'expo-av';

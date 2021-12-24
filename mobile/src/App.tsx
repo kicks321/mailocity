@@ -1,16 +1,14 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { ContainerProvider, ThemeProvider } from '@Core';
+import { ThemeProvider } from '@Core';
 import { Store } from '@Store/Store';
-import { BaseNavigator } from '@Navigation';
+import BaseNavigator from '@Navigation/BaseNavigator.navigation';
 
 const App: React.FC = (): JSX.Element => {
     return (
         <Provider store={Store}>
             <ThemeProvider>
-                <ContainerProvider>
-                    <BaseNavigator />
-                </ContainerProvider>
+                <BaseNavigator />
             </ThemeProvider>
         </Provider>
     );

@@ -38,5 +38,8 @@
     "hooks": {
       "pre-commit": "cd mobile && npm run lint-mobile"
     }
+  },
+  "dependencies": {
+    "expo-av": "^10.2.0"
   }
 }
