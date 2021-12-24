@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ViewStyle } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import BaseStyles from './BaseStyles';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 interface ScreenViewProps {
     children?: React.ReactNode;
@@ -16,8 +17,10 @@ export const ScreenView: React.FunctionComponent<ScreenViewProps> = (props) => {
             duration={props.duration || 500}
             style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
         >
-            <StatusBar style="light" />
-            {props.children}
+            <SafeAreaView>
+                <StatusBar style="dark" />
+                {props.children}
+            </SafeAreaView>
         </Animatable.View>
     );
 };

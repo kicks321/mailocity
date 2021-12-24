@@ -9,6 +9,8 @@ node_modules/
 # expo
 .expo
 .expo-shared
+/.expo
+.expo-shared
 
 # testing
 /coverage
