@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ImageBackground, ImageResizeMode, StyleProp, ViewStyle } from 'react-native';
+import { ImageBackground, ImageResizeMode, StyleProp, ViewStyle } from 'react-native';
 import { BackgroundProps } from '../Background.component';
 import Styles from './Styles';
 

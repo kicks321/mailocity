@@ -6,10 +6,7 @@ import {
 
 const Styles = StyleSheet.create({
     /** ------------------ Screen styles ------------------ */
-    screenLayoutContainerStyle: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
+
     screenLayoutStyle: {
         flex: 1,
         maxWidth: wp(100),

@@ -5,11 +5,15 @@ import {
 } from 'react-native-responsive-screen';
 
 const Styles = StyleSheet.create({
-    /** ------------------ Screen styles ------------------ */
-    imageBackgroundStyle: {
-        ...StyleSheet.absoluteFillObject,
+    /** ------------------ Label styles ------------------ */
+    labelContainerStyle: {
         justifyContent: 'center',
-        backgroundColor: 'rgba(69,85,117,0.7)',
+        textAlign: 'center',
+    },
+    labelDefaultTextStyle: {
+        fontSize: hp(2),
+        color: '#fff',
+        fontWeight: '900',
     },
 });
 
