@@ -2,7 +2,7 @@ import React from 'react';
 import { BaseNavigatorScreenParams } from '@Types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScreenView } from '../Base/BaseScreen.view';
-import { Title } from 'react-native-paper';
+import { Button, Title } from 'react-native-paper';
 import { useSignInViewModel } from '@ViewModels';
 import { Block } from '@Components';
 
@@ -15,6 +15,9 @@ const SignInScreen: React.FunctionComponent<SignInScreenProps> = (props) => {
         <ScreenView>
             <Block>
                 <Title style={{ color: '#f5f' }}>Hello</Title>
+                <Button onPress={() => ViewModel.handleOnNavigate()} mode="contained">
+                    Click me!
+                </Button>
             </Block>
         </ScreenView>
     );

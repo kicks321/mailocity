@@ -7,7 +7,8 @@ import {
 const Styles = StyleSheet.create({
     /** ------------------ Screen styles ------------------ */
     screenLayoutContainerStyle: {
-        opacity: 0,
+        flex: 1,
+        backgroundColor: '#fff',
     },
     screenLayoutStyle: {
         flex: 1,

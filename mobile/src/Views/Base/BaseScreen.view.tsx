@@ -1,9 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ViewStyle } from 'react-native';
+import { SafeAreaView, ViewStyle } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import BaseStyles from './BaseStyles';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 interface ScreenViewProps {
     children?: React.ReactNode;
@@ -13,14 +12,14 @@ interface ScreenViewProps {
 
 export const ScreenView: React.FunctionComponent<ScreenViewProps> = (props) => {
     return (
-        <Animatable.View
-            duration={props.duration || 500}
-            style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
-        >
-            <SafeAreaView>
+        <SafeAreaView style={BaseStyles.screenLayoutContainerStyle}>
+            <Animatable.View
+                duration={props.duration || 500}
+                style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
+            >
                 <StatusBar style="dark" />
                 {props.children}
-            </SafeAreaView>
-        </Animatable.View>
+            </Animatable.View>
+        </SafeAreaView>
     );
 };

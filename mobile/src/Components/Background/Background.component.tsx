@@ -1,7 +1,6 @@
 import React from 'react';
 import { ImageSourcePropType } from 'react-native';
 import Image, { BackgroundImageProps } from './Image/Image.component';
-import Video, { BackgroundVideoProps } from './Video/Video.component';
 
 export interface BackgroundProps {
     children?: React.ReactNode;
@@ -9,12 +8,10 @@ export interface BackgroundProps {
 }
 
 export interface BackgroundComponent {
-    Video: React.FC<BackgroundVideoProps>;
     Image: React.FC<BackgroundImageProps>;
 }
 
 const Background: BackgroundComponent = {
-    Video: Video,
     Image: Image,
 };
 
