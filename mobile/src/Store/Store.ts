@@ -1,4 +1,4 @@
-import { AppState } from '@/Types';
+import { AppState } from '@Types';
 import { applyMiddleware, compose, createStore } from 'redux';
 import DEFAULT_STATE from './AppState';
 import { logger, noOpMiddleware } from './Middleware';

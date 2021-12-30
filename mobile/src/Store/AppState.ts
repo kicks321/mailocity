@@ -1,4 +1,4 @@
-import { AppState } from '@/Types';
+import { AppState } from '@Types';
 import ACTION_TYPES from './ActionTypes';
 
 const DEFAULT_STATE: AppState = {
