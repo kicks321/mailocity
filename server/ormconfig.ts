@@ -32,9 +32,8 @@ const config: ConnectionOptions = {
     cli: {
         // Location of migration should be inside src folder
         // to be compiled into dist/ folder.
-        migrationsDir: 'src/database/migrations'
-    }
+        migrationsDir: 'src/database/migrations',
+    },
 };
 
 export = config;
-

@@ -10,7 +10,7 @@ const Video: React.FunctionComponent<VideoProps> = (props) => {
     return (
         <RNVideo
             source={require('./../assets/video1.mp4')}
-            style={Styles.videoBackgroundStyle}
+            style={Styles.videoLayoutStyle}
             muted={true}
             repeat={true}
             resizeMode={'cover'}

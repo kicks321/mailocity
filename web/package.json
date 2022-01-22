@@ -36,7 +36,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "prepare": "cd .. && husky install web/.husky",
-        "lint-web": "lint-staged"
+        "lint-web": "lint-staged",
+        "format": "prettier --write ."
     },
     "lint-staged": {
         "./src/**/*.{ts,tsx,js,jsx}": [

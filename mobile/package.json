@@ -8,7 +8,8 @@
         "eject": "expo eject",
         "prepare": "cd .. && husky install server/.husky",
         "lint-mobile": "lint-staged",
-        "lint": "eslint --ext .tsx --ext .ts src/ --fix"
+        "lint": "eslint --ext .tsx --ext .ts src/ --fix",
+        "format": "prettier --write ."
     },
     "lint-staged": {
         "./src/**/*.{ts,tsx,js,jsx}": [
