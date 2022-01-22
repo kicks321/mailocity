@@ -1,7 +1,9 @@
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
-    [
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo', 'module:metro-react-native-babel-preset'],
+    plugins: [
+      [
         require.resolve('babel-plugin-module-resolver'),
         {
             root: ['./'],
@@ -40,10 +42,12 @@ module.exports = {
             },
         },
     ],
-],
-env: {
-    production: {
-        plugins: ['react-native-paper/babel'],
-    },
-},
+    ],
+    env: {
+      production: {
+          plugins: ['react-native-paper/babel'],
+      },
+  },
+  };
+  
 };
