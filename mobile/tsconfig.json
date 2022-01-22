@@ -24,7 +24,6 @@
     "jsx": "react-native",
     "baseUrl": ".",
     "paths": {
-      // Components
       "@Core": [
         "./src/Core"
       ],
@@ -40,11 +39,9 @@
       "@Navigation": [
         "./src/Navigation"
       ],
-      // Types
       "@Types": [
         "./src/Types"
       ],
-      // Redux
       "@Store/*": [
         "./src/Store/*"
       ]
@@ -63,5 +60,6 @@
     "jest.config.js",
     "jestSetup.js",
     ".eslintrc.js"
-  ]
+  ],
+  "extends": "expo/tsconfig.base"
 }

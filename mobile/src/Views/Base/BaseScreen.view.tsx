@@ -13,7 +13,7 @@ interface ScreenViewProps {
 
 export const ScreenView: React.FunctionComponent<ScreenViewProps> = (props) => {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={(BaseStyles.screenColorStyle, { flex: 1 })}>
             <Animatable.View
                 duration={props.duration || 500}
                 style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
