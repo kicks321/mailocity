@@ -22,13 +22,11 @@ const TokenHandler = async (req: Request, res: Response, next: NextFunction): Pr
 
     // Check if the token exists
     if (!token) {
-        return res
-            .status(401)
-            .send({
-                ...error,
-                status: ErrorStatus.ACCESS_DENIED,
-                message: 'User needs to sign in',
-            });
+        return res.status(401).send({
+            ...error,
+            status: ErrorStatus.ACCESS_DENIED,
+            message: 'User needs to sign in',
+        });
     }
 
     try {
