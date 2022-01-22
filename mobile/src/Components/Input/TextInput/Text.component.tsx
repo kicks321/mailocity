@@ -1,6 +1,4 @@
-import { Theme } from '@Core';
 import React from 'react';
-import { TextInput as PaperTextInput, HelperText } from 'react-native-paper';
 import { TextInputProps } from 'react-native-paper/lib/typescript/components/TextInput/TextInput';
 
 interface InputTextProps extends TextInputProps {
@@ -8,12 +6,8 @@ interface InputTextProps extends TextInputProps {
     errorText?: string | undefined;
 }
 
-const TextInput: React.FunctionComponent<InputTextProps> = (props) => {
-    return (
-        <React.Fragment>
-            <PaperTextInput theme={Theme} />
-        </React.Fragment>
-    );
+const TextInput: React.FunctionComponent<InputTextProps> = () => {
+    return <React.Fragment></React.Fragment>;
 };
 
 export default TextInput;

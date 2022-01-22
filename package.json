@@ -10,7 +10,8 @@
   },
   "scripts": {
     "web": "cd web && npm run start",
-    "mobile": "cd mobile && expo start",
+    "ios": "cd mobile && npm run ios",
+    "android": "cd mobile && npm run android",
     "server": "cd server && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
@@ -38,8 +39,5 @@
     "hooks": {
       "pre-commit": "cd mobile && npm run lint-mobile"
     }
-  },
-  "dependencies": {
-    "expo-av": "^10.2.0"
   }
 }
