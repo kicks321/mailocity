@@ -3,12 +3,24 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
+<<<<<<< HEAD
         "android": "react-native run-android",
         "ios": "react-native run-ios",
         "start": "react-native start",
         "test": "jest",
         "lint": "eslint --ext .tsx --ext .ts src/ --fix",
         "lint-mobile": "lint-staged"
+=======
+        "start": "expo start",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web",
+        "eject": "expo eject",
+        "prepare": "cd .. && husky install server/.husky",
+        "lint-mobile": "lint-staged",
+        "lint": "eslint --ext .tsx --ext .ts src/ --fix",
+        "format": "prettier --write ."
+>>>>>>> main
     },
     "lint-staged": {
         "./src/**/*.{ts,tsx,js,jsx}": [

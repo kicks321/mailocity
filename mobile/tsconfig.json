@@ -24,7 +24,7 @@
             "@Views": ["./src/Views"],
             "@Components": ["./src/Components"],
             "@ViewModels": ["./src/ViewModels"],
-            "@Navigation/*": ["./src/Navigation/*"],
+            "@Navigation": ["./src/Navigation"],
             // Types
             "@Types": ["./src/Types"],
             // Redux
