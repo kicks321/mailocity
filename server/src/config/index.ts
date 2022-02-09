@@ -14,7 +14,7 @@ export default {
     /**
      * Your favorite port
      */
-    port: parseInt(process.env.PORT || '5000', 10),
+    port: parseInt(process.env.PORT, 10),
 
     /**
      * JWT Verifiers
@@ -31,7 +31,7 @@ export default {
         user: process.env.DB_USER,
         password: process.env.DB_PWD,
         name: process.env.DB_NAME,
-        port: Number.parseInt(process.env.DB_PORT || '5000'),
+        port: Number.parseInt(process.env.DB_PORT),
     },
 
     /**

@@ -1,9 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {IsEmail, IsDate, IsBoolean} from "class-validator";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { IsEmail, IsDate, IsBoolean } from 'class-validator';
 
 @Entity({ name: 'email' })
 export class Email {
-
     @PrimaryGeneratedColumn()
     id: number;
 

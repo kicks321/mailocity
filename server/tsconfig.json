@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "lib": ["es6", "esnext.asynciterable"],
-        "typeRoots": ["./node_modules/@types", "./src/types"],
+        "lib": [
+            "es6",
+            "esnext.asynciterable"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/types"
+        ],
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
@@ -18,9 +24,22 @@
         "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": [
+                "./src/*"
+            ]
         }
     },
-    "include": ["./", "./src/*", "./src/**/*", "ormconfig.ts"],
-    "exclude": ["node_modules", "test", "jest.config.js", "jestSetup.js", ".eslintrc.js"]
+    "include": [
+        "./",
+        "./src/*",
+        "./src/**/*",
+        "ormconfig.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "test",
+        "jest.config.js",
+        "jestSetup.js",
+        ".eslintrc.js"
+    ]
 }

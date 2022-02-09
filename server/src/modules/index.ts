@@ -4,11 +4,11 @@ import Logger from './logger';
 import { createConnection } from 'typeorm';
 
 export default async ({ expressApp }) => {
-  createConnection();
+    createConnection();
 
-  await expressLoader({ app: expressApp });
+    await expressLoader({ app: expressApp });
 
-  await dependency();
+    await dependency();
 
-  Logger.info('✌️ Express loaded');
+    Logger.info('✌️ Express loaded');
 };
