@@ -2,7 +2,9 @@ import { useDispatch } from 'react-redux';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { BaseNavigatorScreenParams } from '@Types';
 import { BaseScreenViewModelParams } from '../Base/BaseScreen.viewModel';
-import API from 'src/API';
+import API from '@API';
+import Configuration from '@Configuration';
+import Constants from 'expo-constants';
 
 interface SignInViewModelParams extends BaseScreenViewModelParams {
     navigation: NativeStackNavigationProp<BaseNavigatorScreenParams>;
@@ -35,10 +37,15 @@ const useSignInViewModel = (params: SignInViewModelParams): SignInViewModel => {
 
         console.log(body);
 
-        const res = await API.post('/auth/signin', body).catch((err: any) => {
-            console.error(err.response.data);
-        });
-        return res;
+        const res = await API.post('/auth/signin', body)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err: any) => {
+                console.error(err);
+            });
+
+        return undefined;
     };
 
     return {

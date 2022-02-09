@@ -18,7 +18,7 @@ export const ScreenView: React.FunctionComponent<ScreenViewProps> = (props) => {
             style={[BaseStyles.screenLayoutStyle, BaseStyles.screenColorStyle, props.style]}
         >
             {props.image ? (
-                <Background.Image source={require('assets/img/bg-sign-in-4.jpg')}>
+                <Background.Image source={require('../../../assets/img/bg-sign-in-4.jpg')}>
                     <SafeAreaView />
                     {props.children}
                     <SafeAreaView />

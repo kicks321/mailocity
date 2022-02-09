@@ -1,47 +1,47 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "target": "es6",
-    "lib": ["es6"],
-    "typeRoots": ["./node_modules/@types", "./src/types"],
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "pretty": true,
-    "sourceMap": true,
-    "outDir": "./build",
-    "allowJs": true,
-    "noEmit": false,
-    "esModuleInterop": true,
-    "jsx": "react-native",
-    "baseUrl": ".",
-    "paths": {
-      // Components
-      "@Core": ["./src/Core"],
-      "@Views": ["./src/Views"],
-      "@Components": ["./src/Components"],
-      "@ViewModels": ["./src/ViewModels"],
-      "@Navigation/*": ["./src/Navigation/*"],
-      // Types
-      "@Types": ["./src/Types"],
-      // Redux
-      "@Store/*": ["./src/Store/*"],
-      // Services
-      "@API": ["./src/API"],
-      "@Configuration": ["./src/Configuration"]
-    }
-},
-"include": ["./", "./src/*", "./src/**/*", "./global.d.ts"],
-"exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js",
-    "jestSetup.js",
-    ".eslintrc.js"
-  ]
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["es6"],
+        "typeRoots": ["./node_modules/@types", "./src/types"],
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "pretty": true,
+        "sourceMap": true,
+        "outDir": "./build",
+        "allowJs": true,
+        "noEmit": false,
+        "esModuleInterop": true,
+        "jsx": "react-native",
+        "baseUrl": ".",
+        "paths": {
+            // Components
+            "@Core": ["./src/Core"],
+            "@Views": ["./src/Views"],
+            "@Components": ["./src/Components"],
+            "@ViewModels": ["./src/ViewModels"],
+            "@Navigation/*": ["./src/Navigation/*"],
+            // Types
+            "@Types": ["./src/Types"],
+            // Redux
+            "@Store/*": ["./src/Store/*"],
+            // Services
+            "@API": ["./src/API"],
+            "@Configuration": ["./src/Configuration"]
+        }
+    },
+    "include": ["./", "./src/*", "./src/**/*", "./global.d.ts"],
+    "exclude": [
+        "node_modules",
+        "babel.config.js",
+        "metro.config.js",
+        "jest.config.js",
+        "jestSetup.js",
+        ".eslintrc.js"
+    ]
 }

@@ -37,6 +37,10 @@ module.exports = function(api) {
                 '@Interfaces': './src/Interfaces',
                 '@Types': './src/Types',
 
+                // Services
+                '@API': './src/API',
+                '@Configuration': './src/Configuration',
+
                 // Assets
                 '@Assets': './assets',
             },
